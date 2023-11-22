@@ -45,19 +45,23 @@ inquirer
 
     const readme= `
     ## Project: \n ${answers.title}
-    ## User Story \n ${discription}
+    ## User Story \n ${answers.discription}
+    ## Acceptance Criteria \n 
+    
     
    
     `;
-    fs.writeFile('Readme.md', html, (err) =>
+
+
+    fs.writeFile('README.md', readme, (err) =>
     err ? console.error(err) : console.log('Success!')
     );    
 
     })
     .catch((error) => {
         if (error.isTtyError) {
-            // Prompt couldn't be rendered in the current environment
+            console.log("Prompt couldn't be rendered in the current environment")
         } else {
-            // Something else went wrong
+            console.log("Something else went wrong")
         }
     });
