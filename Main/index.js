@@ -4,7 +4,7 @@ const fs = require("fs");
 inquirer
     .prompt([
         {
-            name: 'userName',
+            name: 'title',
             type: 'input',
             message: 'What is your project title',
         },
@@ -32,19 +32,21 @@ inquirer
 
     ])
     .then((answers) => {
-    const {projectTitle}=answers;
+    /*const {projectTitle}=answers;
     const{discription}=answers;
     const{instructions}=answers;
     const{usageInformation}=answers;
     const{contributionGuidelines}=answers;
-    const{testInstruction}=answers;
+    const{testInstruction}=answers;*/
 
 
 
 
 
     const readme= `
-    # Module ${projectTitle}
+    ## Project: \n ${answers.title}
+    ## User Story \n ${discription}
+    
    
     `;
     fs.writeFile('Readme.md', html, (err) =>
