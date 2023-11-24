@@ -34,6 +34,11 @@ inquirer
             message: 'Enter Test instructions of your project',
         },
         {
+            name: 'githubName',
+            type: 'input',
+            message: 'Enter your Git user name',
+        },
+        {
             type: 'checkbox',
             name: 'licences',
             message:'Choose a license',
@@ -49,8 +54,8 @@ inquirer
 
     ])
     .then((answers) => {
-        
-       if(answers.licences=="Academic Free License v3.0")
+        console.log(answers.licences)
+      /* if(answers.licences=="Academic Free License v3.0")
             licenceInfromation="This Academic Free License (the “License”) applies to any original work of authorship (the “Original Work”) whose owner (the “Licensor”) has placed the following licensing notice adjacent to the copyright notice for the Original Work:Licensed under the Academic Free License version 3.0"
         
             else if(licences=="Apache license 2.0")
@@ -61,7 +66,7 @@ inquirer
             
             else if (licences=="The Unlicense")
              licenceInfromation="A license with no conditions whatsoever which dedicates works to the public domain. Unlicensed works, modifications, and larger works may be distributed under different terms and without source code. Permissions."
-
+*/
     const readme =
             `## Project:${answers.title}\n## User Story \n ${answers.discription}\n## Acceptance Criteria \nGIVEN a command-line application that accepts user input
             \nWHEN I am prompted for information about my application repository
@@ -77,8 +82,9 @@ inquirer
             \nWHEN I enter my email address
             \nTHEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
             \nWHEN I click on the links in the Table of Contents
-            \nTHEN I am taken to the corresponding section of the README \n##License:${answers.licences} \n
-            ${answers.licences} is the ${licenceInfromation}
+            \nTHEN I am taken to the corresponding section of the README \n ## License:${answers.licences}\n
+            ${answers.licences} is the.\n## Github profile \n
+            https.github\ ${answers.githubName}
     `;
 
 

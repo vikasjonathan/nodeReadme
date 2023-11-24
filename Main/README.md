@@ -1,6 +1,6 @@
-## Project:dasda
+## Project:das
 ## User Story 
- dasa
+ dsadsa
 ## Acceptance Criteria 
 GIVEN a command-line application that accepts user input
             
@@ -32,7 +32,7 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents
             
 THEN I am taken to the corresponding section of the README 
-##License: 
+ ## License:
 
-             is the 
+             is the.
     
