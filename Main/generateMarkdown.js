@@ -57,17 +57,38 @@ function renderLicenseBadge(data) {
     ${data.description}
 
   ## Table of content
+
   [Installation](#installation)
+
   [Usage](#usage)
+
   [License](#license)
+
   [Contributing](#contributing)
+
   [Tests](#tests)
+
   [Questions](#questions)
 
-    
-    
-    
-    `;
+  ## Installation <a id="installation"></a>
+    ${data.installation}
+  ## Usage <a id="usage"></a>
+    ${data.usage}
+  ## License <a id="license"></a>
+  ${licenseSection}
+  ## COntribution <a id="contributing"></a>
+    ${data.contributing}
+  ## Tests <a id="tests"></a>
+    ${data.tests}
+
+  ## Questions <a id="questions"></a>
+  If you have any Questions contact on the below links
+
+  Github: <a href="https://github.com/${data.githubUsername}"> ${data.githubUsername}</a>
+  
+  Email: ${data.email} 
+        
+  `;
   }
 
 module.exports= generateMarkdown;
